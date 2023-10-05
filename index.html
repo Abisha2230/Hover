@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+        @layer utilities{
+            .box-shadow{ 
+                box-shadow: 0 0 5px #4babc5,
+                0 0 25px #4babc5,
+                0 0 75px #4babc5,
+                0 0 100px #4babc5;
+            }
+            .link{
+                @apply text-[#4BABC5] text-4xl uppercase tracking-[4px] text-[16px] border-2 border-[#4babc4] px-5 py-2 rounded
+            }
+            .link:hover{
+                @apply text-black bg-[#4BABC5] box-shadow
+            }
+        }
+    </style>
+    <script>
+        tailwind.config={
+            theme:{
+                extend:{
+
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-black">
+    <div class="flex justify-center items-center h-screen">
+        <a class=" link" href="http://">Love you bby</a>
+    </div>
+</body>
+</html>
